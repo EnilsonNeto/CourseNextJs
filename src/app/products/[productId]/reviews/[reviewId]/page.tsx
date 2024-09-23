@@ -12,6 +12,10 @@ export default function Review({params}: ReviewsParams) {
         notFound()
     }
 
+    if(parseInt(params.reviewId) === 900) {
+        throw Error('Invalid Id')
+    }
+
     return(
         <div>
             <p>Produto {params.productId}</p>
